@@ -13,10 +13,24 @@
         <div class="links">
             <a href="mailto:peytonmeyer23@gmail.com" target="_blank">Email Me</a>
             <a href="https://www.linkedin.com/in/peytonmeyer05/" target="_blank">Linkedin</a>
-            <a href="https://www.instagram.com/probably_peyton/" target="_blank">Instagram</a>
+                        <!-- <a href="https://www.instagram.com/probably_peyton/" target="_blank">Instagram</a> -->
             <!-- <a href="https://your-link-4.com" target="_blank">Link 4</a> -->
-            
+            <button onclick="toggleResume()" class="resume-btn">View My Resume</button> <!-- Button to toggle resume display -->
+        </div>
+        <div id="resume-box" class="resume-box">
+            <iframe src="resume.pdf" width="100%" height="500px"></iframe> <!-- Embedded PDF viewer -->
         </div>
     </div>
+
+    <script>
+        function toggleResume() {
+            var resumeBox = document.getElementById('resume-box');
+            if (resumeBox.style.display === 'none' || resumeBox.style.display === '') {
+                resumeBox.style.display = 'block';
+            } else {
+                resumeBox.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
