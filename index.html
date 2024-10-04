@@ -12,7 +12,7 @@
         <h1>Peyton's Links</h1>
         <div class="links">
             <a href="mailto:peytonmeyer23@gmail.com" target="_blank">Email Me</a>
-            <a href="https://www.linkedin.com/in/peytonmeyer05/" target="_blank">Linkedin</a>
+            <a href="https://www.linkedin.com/in/peytonmeyer05/" target="_blank">LinkedIn</a>
             <button onclick="toggleResume()" class="resume-btn">View My Resume</button> <!-- Button to toggle resume display -->
         </div>
         <div id="resume-box" class="resume-box">
@@ -23,10 +23,18 @@
     <script>
         function toggleResume() {
             var resumeBox = document.getElementById('resume-box');
-            if (resumeBox.style.display === 'none' || resumeBox.style.display === '') {
-                resumeBox.style.display = 'block';
+
+            // Check if the screen width is less than 600px (mobile size)
+            if (window.innerWidth < 600) {
+                // Redirect to resume in a new tab for mobile users
+                window.open('resume.pdf', '_blank');
             } else {
-                resumeBox.style.display = 'none';
+                // Toggle the visibility of the resume on larger screens
+                if (resumeBox.style.display === 'none' || resumeBox.style.display === '') {
+                    resumeBox.style.display = 'block';
+                } else {
+                    resumeBox.style.display = 'none';
+                }
             }
         }
     </script>
