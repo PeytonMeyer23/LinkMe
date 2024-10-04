@@ -75,7 +75,7 @@ a {
     background-color: #333;
     color: white;
     padding: 14px;
-   border-radius: 8px;
+    border-radius: 8px;
     margin-bottom: 12px;
     font-size: 20px;
     transition: background-color 0.3s ease;
@@ -85,6 +85,9 @@ a {
 }
 
 .resume-btn:hover {
+    background-color: #555;
+}
+.resume-btn:active {
     background-color: #555;
 }
 
