@@ -99,4 +99,53 @@ a {
     padding: 10px;
     background-color: #282828;
 }
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .resume-box {
+        max-height: none;
+        height: auto;
+    }
+
+    .links a, .resume-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: auto;
+    }
+
+    iframe {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .profile-pic {
+        width: 80px;
+    }
+
+    .links a, .resume-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    iframe {
+        height: 300px;
+    }
+}
 
