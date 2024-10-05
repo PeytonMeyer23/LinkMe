@@ -7,9 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="date-time" class="date-time"></div> <!-- Date and Time Container -->
+    
     <div class="container">
         <img src="profile.png" alt="Profile Picture" class="profile-pic">
-        <h1>Peyton's Links</h1>
+        <h1 id="typing-text"></h1>
+<script>
+    let i = 0;
+    let text = "Peyton's Links";
+    
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById("typing-text").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 150);
+        }
+    }
+    window.onload = typeWriter;
+</script>
+
         <div class="links">
             <a href="mailto:peytonmeyer23@gmail.com" target="_blank">Email Me</a>
             <a href="https://www.linkedin.com/in/peytonmeyer05/" target="_blank">LinkedIn</a>
@@ -37,6 +53,26 @@
                 }
             }
         }
+
+        // Function to display current date and time
+        function updateDateTime() {
+            const dateTimeElement = document.getElementById('date-time');
+            const now = new Date();
+            const formattedDateTime = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+            dateTimeElement.textContent = formattedDateTime;
+        }
+
+        // Update date and time every second
+        setInterval(updateDateTime, 1000);
     </script>
+    <script>
+        document.querySelector('.profile-pic').addEventListener('click', function() {
+            this.classList.add('spin');
+            setTimeout(() => {
+                this.classList.remove('spin'); // This ensures the spin can happen again on future clicks
+            }, 1000); // Match the duration of the animation (1 second)
+        });
+    </script>
+    
 </body>
 </html>

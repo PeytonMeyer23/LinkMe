@@ -15,6 +15,14 @@ body {
     overflow: hidden;
 }
 
+.date-time {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: #ccc; /* Slightly dimmed color for the time display */
+}
+
 .container {
     text-align: center;
     max-width: 500px;
@@ -132,4 +140,16 @@ a {
         font-size: 14px;
         padding: 8px;
     }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.profile-pic.spin {
+    animation: spin 1s ease-in-out;
 }
